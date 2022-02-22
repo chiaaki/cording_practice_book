@@ -33,5 +33,16 @@
         0001-1234-5678</p>
     </footer>
     
+    <script>
+        var osDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function darkModeOn() {
+            document.documentElement.classList.add("darkmode");
+        }
+
+        if(osDark.matches) {
+            darkModeOn();
+        }
+    </script>
 </body>
 </html>

@@ -16,6 +16,16 @@
     --main2dark: var(--main);
 }
 
+:root.darkmode {
+    --text: #EBEBEB;
+    --textwhite: #EBEBEB;
+    --back: #231802;
+    --backtrans: rgba(35, 24, 2, 0.7);
+    --backcheck: #372A0A;
+    --main2sub: var(--sub);
+    --main2dark: var(--dark);
+}
+
 /* 基本設定 */
 body {
     font-family: sans-serif;
