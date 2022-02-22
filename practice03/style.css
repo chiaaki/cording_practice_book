@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 変数 */
+
+:root {
+    --main: #F26A74;
+    --sub: #FFA5A5;
+    --dark: #E13845;
+
+    --text: #444444;
+    --textwhite: #FFFFFF;
+    --back: #FFFFFF;
+    --backtrans: rgba(255, 255, 255, 0.6);
+    --backcheck: #FFF7D2;
+    --main2sub: var(--main);
+    --main2dark: var(--main);
+}
