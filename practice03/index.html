@@ -40,9 +40,18 @@
             document.documentElement.classList.add("darkmode");
         }
 
-        if(osDark.matches) {
-            darkModeOn();
+        function darkModeOff() {
+            document.documentElement.classList.remove("darkmode");
         }
+
+        osDark.addListener(function () {
+            if (osDark.matches) {
+                darkModeOn();
+            } else {
+                darkModeOff();
+            }
+        })
+
     </script>
 </body>
 </html>
