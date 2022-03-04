@@ -2,39 +2,13 @@
 
 /* 変数 */
 
-:root {
-    --main: #F26A74;
-    --sub: #FFA5A5;
-    --dark: #E13845;
-
-    --text: #444444;
-    --textwhite: #FFFFFF;
-    --back: #FFFFFF;
-    --backtrans: rgba(255, 255, 255, 0.6);
-    --backcheck: #FFF7D2;
-    --main2sub: var(--main);
-    --main2dark: var(--main);
-
-    --change: 0.5s ease-in-out;
-}
-
-:root.darkmode {
-    --text: #EBEBEB;
-    --textwhite: #EBEBEB;
-    --back: #231802;
-    --backtrans: rgba(35, 24, 2, 0.7);
-    --backcheck: #372A0A;
-    --main2sub: var(--sub);
-    --main2dark: var(--dark);
-}
-
 /* 基本設定 */
 body {
     font-family: sans-serif;
-    background-color: var(--back);
-    color: var(--text);
+    background-color: #231802;
+    color: #EBEBEB;
     text-align: center;
-    transition: var(--change);
+    transition: 0.5s ease-in-out;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, figure {
@@ -85,7 +59,7 @@ a:hover {
     background-image: url(img/candy.jpg);
     background-size: cover;
     background-position: center;
-    transition: var(--change);
+    transition: 0.5s ease-in-out;
 }
 
 .darkmode .header::after {
@@ -182,7 +156,7 @@ a:hover {
 }
 
 .site p {
-    color: var(--textwhite);
+    color: #EBEBEB;
     font-size: 16px;
     font-weight: bold;
 }
@@ -191,12 +165,12 @@ a:hover {
     width: 137px;
     line-height: 51px;
     text-align: center;
-    border: solid 1px var(--sub);
-    background-color: var(--backtrans);
-    color: var(--main2sub);
+    border: solid 1px #FFA5A5;
+    background-color: rgba(35, 24, 2, 0.7);
+    color: #FFA5A5;
     font-size: 21px;
     font-family: Georgia, serif;
-    transition: var(--change);
+    transition: 0.5s ease-in-out;
 }
 
 .onofftext::before {
@@ -246,37 +220,88 @@ a:hover {
 }
 
 /* 縦のライン */
-.site::after,
-.msg::before,
+.site::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+@media (min-width: 768px){
+    .site::after{
+    height: 154px;
+    }
+}
+.msg::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+@media (min-width: 768px){
+    .msg::before{
+    height: 154px;
+    }
+}
 .msg::after {
     content: '';
     display: block;
     width: 1px;
-    height: var(--whiteLine);
+    height: 100px;
     margin: 0 auto;
     background-color: #FFFFFF;
 }
+@media (min-width: 768px){
+    .msg::after{
+    height: 154px;
+    }
+}
 
-.photos::before,
-.phoros::after,
+.photos::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #FFA5A5;
+}
+
+@media (min-width: 768px){
+    .photos::before{
+    height: 120px;
+    }
+}
+
+.phoros::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #FFA5A5;
+}
+
+@media (min-width: 768px){
+    .phoros::after{
+    height: 120px;
+    }
+}
+
 .footer::before {
     content: '';
     display: block;
     width: 1px;
-    height: var(--pinkLine);
+    height: 100px;
     margin: 0 auto;
-    background-color: var(--sub);
+    background-color: #FFA5A5;
 }
 
-:root {
-    --whiteLine: 100px;
-    --pinkLine: 100px;
-}
-
-@media (min-width: 768px) {
-    :root {
-        --whiteLine: 154px;
-        --pinkLine: 120px;
+@media (min-width: 768px){
+    .footer::before{
+    height: 120px;
     }
 }
 
@@ -294,7 +319,7 @@ a:hover {
 
 .text h2 {
     margin-bottom: 30px;
-    color: var(--main);
+    color: #F26A74;
     font-size: 15px;
     line-height: 1.5;
 }
@@ -308,8 +333,8 @@ a:hover {
 .msg .text {
     padding: 42px 25px;
     border-radius: 30px;
-    background-color: var(--backtrans);
-    transition: var(--change);
+    background-color: rgba(35, 24, 2, 0.7);
+    transition: 0.5s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -336,7 +361,7 @@ a:hover {
 /* 写真一覧 */
 .photos {
     padding: 0 25px;
-    background-color: var(--backcheck);
+    background-color: #372A0A;
     background-image: url(img/check.png);
 }
 
@@ -411,6 +436,6 @@ a:hover {
 }
 
 .footer ul i {
-    color: var(--main2sub);
+    color: #FFA5A5;
     font-size: 40px;
 }
