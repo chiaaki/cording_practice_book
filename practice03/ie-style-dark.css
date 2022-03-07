@@ -19,7 +19,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, figure {
 
 img, svg {
     max-width: 100%;
-    height: auto;
     vertical-align: bottom;
 }
 
@@ -438,4 +437,39 @@ a:hover {
 .footer ul i {
     color: #FFA5A5;
     font-size: 40px;
+}
+
+/* IE用追加設定 */
+.cls-2 {
+    fill: #EBEBEB;
+    transition: 0.5s ease-in-out;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header::after {
+    z-index: -2;
+}
+
+.darkmode .photos li {
+    position: relative;
+}
+
+.darkmode .photos li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
 }
